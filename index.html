@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraction Calculator </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <script src="script.js" defer></script>
+
+    <div class="calculatorcontainer" id="calculator">
+        <div class="background">Convert a Fraction to a Decimal or Percentage
+            <div class="fractionParts">
+                <div class="fractionLeft">
+                    <input onkeypress="if (event.key === 'Enter') calculate()" onkeyup="formatNumberInput(this)"
+                        class="fractionInput" id="numerator" type="number">
+                    <hr class="fractionBar">
+                    <input onkeypress="if (event.key === 'Enter') calculate()" onkeyup="formatNumberInput(this)"
+                        class="fractionInput" id="denominator" type="number">
+                </div>
+                <select name="operator" id="operator">
+                    <option value="decimal">To Decimal</option>
+                    <option value="percentage">To Percentage</option>
+                </select>
+            </div>
+            <div id="result">
+
+            </div>
+
+            <button class="calculate" onclick="calculate()" data-uw-rm-kbnav="click">Calculate</button>
+        </div>
+    </div>
+    <div id="formula" style="text-align: center; margin-bottom: 20px; font-size: 90%;"> Found a bug? <a class="ylist"
+            href="" target="_blank" rel="noopener">Let us know!</a></div>
+    </div>
+</body>
+
+</html>
