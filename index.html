@@ -13,30 +13,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.js"></script>
     <script src="script.js" defer></script>
 
-    <div class="calculatorcontainer" id="calculator">
-        <div class="background">Convert a Fraction to a Decimal or Percentage
+    <div class="calculatorcontainer" id="fracToDecimal">
+        <div class="background"><label>Convert a Fraction to a Decimal or Percentage</label>
             <div class="fractionParts">
-                <div class="fractionLeft">
-                    <input onkeypress="if (event.key === 'Enter') calculate()" onkeyup="formatNumberInput(this)"
-                        class="fractionInput" id="numerator" type="number">
-                    <hr class="fractionBar">
-                    <input onkeypress="if (event.key === 'Enter') calculate()" onkeyup="formatNumberInput(this)"
-                        class="fractionInput" id="denominator" type="number">
+                <div class="fractionStack">
+                    <div><input onkeypress="if (event.key === 'Enter') calculateFracToDec()" class="fractionInput"
+                            id="numerator" type="number"></div>
+                    <div class="fractionBar"></div>
+                    <div><input onkeypress="if (event.key === 'Enter') calculateFracToDec()" class="fractionInput"
+                            id="denominator" type="number"></div>
                 </div>
-                <select name="operator" id="operator">
-                    <option value="decimal">To Decimal</option>
-                    <option value="percentage">To Percentage</option>
-                </select>
+                <div><select name="operator" id="operator">
+                        <option value="decimal">To Decimal</option>
+                        <option value="percentage">To Percentage</option>
+                    </select></div>
             </div>
             <div id="result">
 
             </div>
 
-            <button class="calculate" onclick="calculate()" data-uw-rm-kbnav="click">Calculate</button>
+            <div><button class="calculate" onclick="calculateFracToDec()" data-uw-rm-kbnav="click">Calculate</button>
+            </div>
         </div>
     </div>
     <div id="formula" style="text-align: center; margin-bottom: 20px; font-size: 90%;"> Found a bug? <a class="ylist"
-            href="" target="_blank" rel="noopener">Let us know!</a></div>
+            href="https://airtable.com/appR7FfpamrmFpTmL/pagGUR4cIuGPtr6cm/form?prefill_Calculator=FractionToDecimal&amp;hide_Calculator=true"
+            target="_blank" rel="noopener">Let us know!</a></div>
     </div>
 </body>
 
