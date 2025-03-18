@@ -68,8 +68,7 @@
     font-size: 18px;
 }
 
-#operator {
-    font-size: larger;
+#fracToDecimal #operator {
     font-weight: bold;
 }
 
